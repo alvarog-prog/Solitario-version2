@@ -1,6 +1,4 @@
-//¡lvaro Gil Arjona
-//VÌctor Verd˙ GarcÌa
-//Grupo: LAB 11 G12
+
 #include "checkML.h"
 #include "juego.h"
 #include "Usuarios.h"
@@ -11,7 +9,7 @@ using namespace std;
 
 
 void cargar(tListaJuegos& lista, ifstream& file) {
-	file >> lista.contador;//Leemos contador(n˙mero de juegos)
+	file >> lista.contador;//Leemos contador(n√∫mero de juegos)
 	while (lista.contador < lista.capacidad) {//si el contador es menor que la capacidad, aumenta capacidad
 		lista.capacidad += DELTA;
 	}
@@ -33,7 +31,7 @@ void insertar(tListaJuegos& lista,  tJuego& juego) {//+
 		lista.juegos = aux;
 	}
 	tJuego* aux2 = new tJuego[lista.capacidad];
-	aux2 = &juego;//Apuntamos a la direcciÛn de juego
+	aux2 = &juego;//Apuntamos a la direcci√≥n de juego
 	lista.juegos[lista.contador] = juego;
 	lista.contador++;
 
@@ -61,7 +59,7 @@ void liberar(tListaJuegos& lista) {
 
 
 void mostrar(const tListaJuegos& lista) {//Mostramos la lista de juegos de cada usuario.
-	cout << "Numero de juegos: " << lista.contador << endl;//N˙mero de juegos.
+	cout << "Numero de juegos: " << lista.contador << endl;//N√∫mero de juegos.
 	for (int i = 0; i < lista.contador; i++) {
 		cout << "Juego" << i + 1 << endl;
 		mostrar(lista.juegos[i].tablero);
@@ -129,4 +127,5 @@ int eligeJuego(tListaJuegos& lista) {
 
 void actualizaPrivacidad(tListaJuegos& lista, const tJuego& juego, int posJuego) {
 	lista.juegos[posJuego] = juego;//Actualiza el juego
+
 }
