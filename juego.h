@@ -1,6 +1,3 @@
-//Álvaro Gil Arjona
-//Víctor Verdú García
-//Grupo: LAB 11 G12
 
 #ifndef juego_h
 #define juego_h
@@ -21,7 +18,7 @@ typedef tJuego* tJuegoPtr;
 
 
 // Subprogramas del enunciado
-// IMPORTANTE: decide cuáles permanecen públicos y traslada los que creas que deben ser privados (si es el caso)
+// IMPORTANTE: decide cuÃ¡les permanecen pÃºblicos y traslada los que creas que deben ser privados (si es el caso)
 
 void cargar(tJuego& juego, std::ifstream& fichero);
 void mostrar(const tJuego& juego);
@@ -39,3 +36,4 @@ void estadoJug(tJuego& juego);//QUITAR
 bool estado(tJuego& juego);
 
 #endif
+
