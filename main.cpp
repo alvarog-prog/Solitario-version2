@@ -1,6 +1,3 @@
-//Álvaro Gil Arjona
-//Víctor Verdú García
-//Grupo:LAB 11 G12
 
 #include <iostream>
 #include <string>
@@ -33,7 +30,7 @@ int main() {
 	tListaJuegos lJuegos;
 	bool fin, carga, parado;
 	int j, busqueda;
-	srand(time(NULL)); //Genera los números aleatorios
+	srand(time(NULL)); //Genera los nÃºmeros aleatorios
 	int pasos = 0;
 	cout << "----------BIENVENIDO AL SOLITARIO----------" << endl;
 	do {
@@ -50,7 +47,7 @@ int main() {
 					if (posicion == -1) {//No existe
 						cout << "El usuario seleccionado no existe" << endl;
 						user = nuevoUsuario(lista, id);//Creamos el nuevo usuario, con el id introducido por pantalla
-						if (user == -1) {//Si nuevo usuario devuelve -1, significa que la lista esta completa(MAXÍMO 5 USUARIOS)
+						if (user == -1) {//Si nuevo usuario devuelve -1, significa que la lista esta completa(MAXÃMO 5 USUARIOS)
 							cout << "No pueden crearse mas usuarios" << endl;
 							cout << "PULSE ENTER PARA VISUALIZAR LISTA USUARIOS" << endl;
 							char boton;
@@ -91,7 +88,7 @@ int main() {
 			nombreGUardar = solicitaNombreFicheroGuardar();//Si decidimos acabar el juego, guardamos nuestra lista en un archivo.
 			guardar(lista, nombreGUardar);//Guardamos
 			cout << "Guardado en " << nombreGUardar << endl;
-			liberar(lista);//Liberamos la memoria dinámica
+			liberar(lista);//Liberamos la memoria dinÃ¡mica
 	return 0;
 }
 
@@ -100,14 +97,14 @@ int main() {
 string solicitaNombreFichero() {
 	string nombre;
 	cout << "Nombre del fichero: ";
-	cin >> nombre; // se introduce nombre, sin extensión
+	cin >> nombre; // se introduce nombre, sin extensiÃ³n
 	nombre = nombre + ".txt";
 	return nombre;
 }
 string solicitaNombreFicheroGuardar() {
 	string nombre;
 	cout << "Nombre del fichero donde quieres guardar: ";
-	cin >> nombre; // se introduce nombre, sin extensión
+	cin >> nombre; // se introduce nombre, sin extensiÃ³n
 	nombre = nombre + ".txt";
 	return nombre;
 }
@@ -117,3 +114,4 @@ string solicitaNombreUsuario() {
 	cin >> id;
 	return id;
 }
+
