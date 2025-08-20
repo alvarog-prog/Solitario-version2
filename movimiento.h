@@ -1,6 +1,3 @@
-//Álvaro Gil Arjona
-//Víctor Verdú García
-//Grupo: LAB 11 G12
 
 #ifndef movimiento_h
 #define moviento_h
@@ -28,7 +25,7 @@ struct tMovimientoLista {
 
 
 // Subprogramas del enunciado
-// IMPORTANTE: decide cuáles permanecen públicos y traslada los que creas que deben ser privados (si es el caso)
+// IMPORTANTE: decide cuÃ¡les permanecen pÃºblicos y traslada los que creas que deben ser privados (si es el caso)
 
 bool fichaBloqueada(const tTablero& tablero, int fila, int col);
 tMovimiento leeMovimiento(const tTablero& tablero, int& fila, int& col, bool& fin);
@@ -39,3 +36,4 @@ void realizaMovimientoInverso(tTablero& tablero, int fila, int col, const tMovim
 
 
 #endif
+
