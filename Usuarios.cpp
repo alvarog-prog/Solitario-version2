@@ -1,6 +1,4 @@
-//Álvaro Gil Arjona
-//Víctor Verdú García
-//Grupo: LAB 11 G12
+
 #include "checkML.h"
 #include "juego.h"
 #include "movimiento.h"
@@ -58,13 +56,13 @@ int buscar(const tListaUsuarios& lista, string id) {
 		if (lista.usuarios[i]->id != id) {
 			pos = -1;
 		}
-		else {//Si el usuario escrito por pantalla coincide, se devuelve su posición.
+		else {//Si el usuario escrito por pantalla coincide, se devuelve su posiciÃ³n.
 			pos = i;
 			ok = true;
 		}
 		i++;
 	}
-	return pos;//Devolvemos la posición
+	return pos;//Devolvemos la posiciÃ³n
 }
 
 
@@ -72,7 +70,7 @@ int buscar(const tListaUsuarios& lista, string id) {
 
 
 void actualizaJuegoUsuario(tListaUsuarios& lista, int posUsuario, int posJuego, const tJuego& juego) {
-	actualizaPrivacidad(lista.usuarios[posUsuario]->lista, juego, posJuego);//Llama a la función con la intención de respetar privacidad
+	actualizaPrivacidad(lista.usuarios[posUsuario]->lista, juego, posJuego);//Llama a la funciÃ³n con la intenciÃ³n de respetar privacidad
 }
 
 
@@ -120,7 +118,7 @@ int nuevoUsuario(tListaUsuarios& lista, string id) {
 		user.id = id;//Introducimos el usuario en el struct
 		lista.usuarios[lista.contador] = new tUsuario(user);
 		x = lista.contador;//Devolvemos el contador
-		lista.contador++;//Y lo aumentamos ya que hay un usuario más.
+		lista.contador++;//Y lo aumentamos ya que hay un usuario mÃ¡s.
 	}
 	return x;
 }
@@ -138,4 +136,5 @@ int eligeJuegoUsuario(const tListaUsuarios& lista, int indUsuario) {
 tJuego dameJuegoPrivacidad(const tListaUsuarios& lista, int posUsuario, int posJuego) {
 	return dameJuego(lista.usuarios[posUsuario]->lista, posJuego);//Llamamos a dameJuego para respetar la privacidad
 }
+
 	
