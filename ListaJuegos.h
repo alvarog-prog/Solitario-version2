@@ -1,6 +1,3 @@
-//Álvaro Gil Arjona
-//Víctor Verdú García
-//Grupo: LAB 11 G12
 
 #ifndef ListaJuegos_h
 #define ListaJuegos_h
@@ -31,5 +28,6 @@ void disminuir(tListaJuegos& lista);
 
 void actualizaPrivacidad(tListaJuegos& lista, const tJuego& juego, int posJuego);
 tJuego dameJuego(const tListaJuegos& lista, int pos);
+
 
 #endif
